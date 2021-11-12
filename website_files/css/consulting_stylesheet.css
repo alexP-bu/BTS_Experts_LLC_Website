@@ -1,0 +1,75 @@
+/*consulting page style*/
+.consulting_content{
+    height: 72.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*consulting content header text*/
+.consulting_content_header{
+    margin-bottom: 5vh;
+    padding-bottom: 1vh;
+    border-bottom: 0.8vh solid rgb(44, 81, 150);
+    text-align: center;
+    font-size: 4vh;
+    font-family: 'Dosis', sans-serif;
+    font-weight: bold;
+}
+.consulting_content_main_content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+/*service selection grid*/
+.main_content_service_selection{
+    width: 40%;
+    height: 100%;
+    margin: 3vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 1vh;
+    row-gap: 1vh;
+}
+/*styling for each button*/
+.main_content_service_selection > p{
+    padding-top: 20%;
+    padding-bottom: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: rgb(56, 121, 241);
+    border: 0.4vh solid black;
+    font-size: 150%;
+    white-space: nowrap;
+}
+.main_content_service_selection p:hover{
+    cursor: pointer;
+    background-color: rgb(103, 149, 235) !important;
+}
+/*selected service text box*/
+.service_text_box{
+    width: 75%;
+    display: flex;
+    align-items: center;
+}
+.service_text_box li{
+    margin-left: 5vh;
+    font-size: 2vh;
+    text-align: left;
+    animation: fadein 0.75s;
+}
+.service_text_box li + li{
+    margin-top: 5vh;
+}
+/*fade in animation for serviceTextBox*/
+@keyframes fadein {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

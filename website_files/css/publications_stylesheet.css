@@ -1,0 +1,100 @@
+/*publications page style*/
+.publications_content{
+    height: 72.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*publications content header text*/
+.publications_content_header{
+    margin-bottom: 2.5vh;
+    padding-bottom: 1vh;
+    border-bottom: 0.8vh solid rgb(44, 81, 150);
+    text-align: center;
+    font-size: 4vh;
+    font-family: 'Dosis', sans-serif;
+    font-weight: bold;
+}
+/*publications outer content table elements*/
+.table_title{
+    font-size: 130%;
+    grid-area: table_title;
+    font-weight: 500;
+}
+#table_left_arrow{
+    grid-area: left_arrow;
+    height: 8vh;
+    cursor: pointer;
+}
+#table_right_arrow{
+    grid-area: right_arrow;
+    height: 8vh;
+    cursor: pointer;
+}
+/*publications inner content table elements*/
+.table_content_image{
+    grid-area: table_image;
+}
+.table_content_title{
+    grid-area: table_content_title;
+    height: 100%;
+    overflow: scroll;
+}
+.table_content_date{
+    grid-area: table_content_date;
+    height: 100%;
+    overflow: scroll;
+}
+.table_content_abstract{
+    grid-area: table_content_abstract;
+    height: 100%;
+    overflow: scroll;
+}
+/*all elements styling*/
+.table_content > * {
+    padding: 0.5vh;
+    border: 0.25vh solid black;
+    font-size: 1.7vh;
+}
+/*inner grid formatting*/
+.table_content{
+    padding: 2vh;
+    grid-area: table_content;
+    display: grid;
+    grid-template-areas: 
+     "table_image table_content_title"
+     "table_image table_content_date"
+     "table_image table_content_abstract";
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr 1fr; 
+    column-gap: 2%;
+    row-gap: 2%;
+    height: 100%;
+    width: 100%;
+    border: 0.5vh solid rgb(44, 81, 150);
+    animation: fadein 0.5s;
+}
+/*outer grid formatting*/
+.publications_content_table{
+    height: 100%;
+    display: grid;
+    padding-top: 2vh;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "table_title table_title table_title"
+        "left_arrow table_content right_arrow";
+    align-items: center;
+    justify-items: center;
+    row-gap: 7vh;
+    margin-bottom: 5vh;
+}
+/*animation*/
+@keyframes fadein {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

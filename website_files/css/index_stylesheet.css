@@ -1,0 +1,101 @@
+/*index page styling*/
+.index_content{
+    height: 72.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*index content header text*/
+.index_content_header{
+    margin-bottom: 5vh;
+    padding-bottom: 1vh;
+    border-bottom: 0.8vh solid rgb(44, 81, 150);
+    text-align: center;
+    font-size: 4vh;
+    font-family: 'Dosis', sans-serif;
+    font-weight: bold;
+}
+/*index main content*/
+.index_content_main_content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1vh;
+    padding-left: 1.5vh;
+    padding-right: 1.5vh;
+}
+/*index content boxes*/
+.main_content_content_box{
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 0vh;
+    border: 0.5vh solid rgb(50, 80, 140);
+}
+/*content box text box styling*/
+.content_box_description_text{
+    padding: 2vh;
+    text-align: center;
+    font-size: 100%;
+    font-family: 'Barlow', sans-serif;
+    font-weight: bold;
+}
+/*content box image container*/
+.content_box_image_box{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.content_box_image_box img{
+    height: 15vh;
+    border: 0.2vh solid black;
+}
+/*content box buttons*/
+.content_box_button{
+    margin-top: 3vh;
+    position: relative;
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    border: 0.3vh solid rgb(56, 121, 241);
+    /*animation*/
+    background: transparent;
+    overflow: hidden;
+    transition: color 0.5s ease;
+}
+.content_box_button::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: calc(100%);
+    width: calc(100%);
+    background: rgb(56, 121, 241);
+    transform: translateX(-100%);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+.content_box_button:hover::before{
+    transform: translateX(0);
+}
+.content_box_button:hover{
+    cursor: pointer;
+}
+/*content box button text styling*/
+.content_box_button > p{
+    z-index: 2;
+    margin: 0.5%;
+    color: rgb(56, 121, 241);
+    text-align: center;
+    font-size: 125%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    white-space: nowrap;
+}
+/*change content button text on hover*/
+.content_box_button:hover p{
+    transition: color 0.5s ease;
+    color: rgb(235, 235, 235);
+}

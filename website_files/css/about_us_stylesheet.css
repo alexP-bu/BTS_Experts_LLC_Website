@@ -1,0 +1,40 @@
+/*about_us page styling*/
+.about_us_content{
+    height: 72.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about_us_content_header{
+    margin-bottom: 5vh;
+    padding-bottom: 1vh;
+    border-bottom: 0.8vh solid rgb(44, 81, 150);
+    text-align: center;
+    font-size: 4vh;
+    font-family: 'Dosis', sans-serif;
+    font-weight: bold;
+}
+.about_us_content_main_content{
+    display: grid;
+    grid-template-columns: 0.25fr 1fr;
+    grid-template-rows: 0.15fr 1fr 1fr;
+    justify-items: center;
+    justify-content: center;
+    column-gap: 25vh;
+    row-gap: 0.5vh;
+}
+.about_us_content_main_content > p{
+    font-size: 130%;
+    font-weight: bold;
+}
+.about_us_content_main_content > ul > li{
+    font-size: 125%;
+    font-weight: 500;
+    margin-top: 0.5vh;
+    text-underline-position: under;
+}
+
+.about_us_content_main_content > img{
+    height: 80%;
+    border: 2px solid black;
+}
