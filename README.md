@@ -1,3 +1,6 @@
-# BTS_Experts_LLC_Website
+# BTS Experts LLC Website
 
-FINAL working published website
+Currently visible at inventbattery.com!
+
+A simple static website for a consulting company.
+Developed with the LAMP stack.
