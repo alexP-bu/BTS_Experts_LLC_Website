@@ -9,7 +9,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-$output_email = "apozin@bu.edu";
+$output_email = "";
 
 $MAX_LENGTHS = 
             [
@@ -91,17 +91,17 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
         //Server settings
         $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
         $mail->isSMTP();                                            //Send using SMTP
-        $mail->Host       = 'ssl://smtp.titan.email';               //Set the SMTP server to send through
+        $mail->Host       =              //Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-        $mail->Username   = 'admin@inventbattery.com';              //SMTP username
-        $mail->Password   = 'kartina12';                            //SMTP password
+        $mail->Username   =                                         //SMTP username
+        $mail->Password   =                                         //SMTP password
 //      $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
         $mail->SMTPSecure = 'ssl';
         $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
         $mail->SMTPAutoTLS = false;
         //Recipients
-        $mail->setFrom   ('admin@inventbattery.com');
-        $mail->addAddress('admin@inventbattery.com');               //Add a recipient
+        $mail->setFrom   ();
+        $mail->addAddress();               //Add a recipient
 
         //Content
         $mail->Subject = $user_info["message_subject"];
